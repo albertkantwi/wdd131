@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;wght@500;wght@600;700&display=swap');
-
 :root {
     --big-text: #172b4d;
     --small-text: #344563;
     --btn-color: #396df2;
     --bg: #fff;
     --bg2: #6070ff;
-    --font: 'Poppins', sans-serif;
+    --font: 'Lato', sans-serif;
 }
 
 * {
@@ -15,11 +13,18 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: var(--font);
+}
+
+header {
+    margin-bottom: 20px;
+}
+
 header span {
     display: block;
     text-align: center;
     background: var(--bg2);
-    font-family: var(--font);
     font-size: 20px;
     padding: 1rem 0;
     color: var(--bg);
@@ -34,12 +39,15 @@ header nav {
 }
 
 header nav a {
-    font-family: var(--font);
     font-size: 1rem;
     text-decoration: none;
     padding: 0.5rem 0;
     color: var(--bg2);
     font-weight: 500;   
+}
+
+header nav a:hover {
+    color: var(--bg)
 }
 
 main {
@@ -48,21 +56,12 @@ main {
     margin: 0 auto;
 }
 
-h1, h2, p {
-    font-family: var(--font);
-}
-
 h1 {
     display: block;
     text-align: center;
     font-size: 20px;
     font-weight: 600;
     color: var(--big-text);
-}
-
-.my-name {
-    margin: 1rem 0;
-    font-size: 24px;
 }
 
 p {
@@ -138,7 +137,6 @@ ul {
 }
 
 li {
-    font-family: var(--font);
     font-size: 1rem;
     color: var(--small-text);
     padding: .3rem 0;
@@ -151,7 +149,7 @@ li::marker {
 footer {
     background: var(--bg2);
     padding: 1rem 0;
-    margin-top: 2rem;
+    margin-top: 20px;
 }
 
 footer p {
