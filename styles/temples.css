@@ -1,0 +1,122 @@
+:root {
+    --color-bg-1: #1c1a19;
+    --color-bg-2: #fff;
+    --primary-color: #ff6b00;
+    --secondary-color: #3c3a39;
+    --font: 'Poppins', 'san serif';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font);
+}
+
+header {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    position: relative;
+}
+
+header span {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-bg-2);
+}
+
+nav {
+    background-color: var(--secondary-color);
+    max-width: 600px;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation a {    
+        text-decoration: none;
+        color: var(--color-bg-2);
+        font-size: 1rem;
+        display: none;
+        padding: 1rem;
+        margin: .5rem 0;
+    }
+
+.navigation a:hover {
+    color: var(--primary-color);
+}
+
+#menu {
+	font-size: 1.5rem;
+	border: 0;
+	background: none;
+	color: var(--color-bg-2);
+ 	position: absolute;
+	top: 1rem;
+	right: 1rem;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.open a {
+    display: block;
+}
+
+main {
+    max-width: 600px;
+    background-color: var(--color-bg-2);
+    padding: 0 5%;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 1rem;
+    color: var(--color-bg-1);
+}
+
+figure {
+    margin: 1rem 0;
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption {
+    font-size: 0.8rem;
+    text-align: center;
+    color: var(--color-bg-1);
+}
+
+footer {
+    background: var(--secondary-color);
+    padding: .5rem 0;
+    margin-top: 40px;
+}
+
+footer p {
+    display: block;
+    text-align: center;
+    color: var(--color-bg-2);
+}
+
+.para {
+    font-size: 0.8rem;
+}
