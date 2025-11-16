@@ -29,6 +29,7 @@ header span {
 }
 
 nav {
+    display: flex;
     background-color: var(--secondary-color);
     max-width: 600px;
 }
