@@ -12,12 +12,13 @@
     }
 
     nav {
-        width: 100%;
         background: none;
+        width: 100%;
     }
 
 
     .navigation {
+        width: 100%;
         flex-direction: row;
         align-items: center;
     }
