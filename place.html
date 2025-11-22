@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Temple Album</title>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <span>Accra, Ghana</span>
+    </header>
+    <main>
+        <picture>
+            <source srcset="images/hawaii-small.webp" media="screen and (max-width: 800px)">
+            <img src="images/accra.webp" alt="A picture of indepence square Accra">
+        </picture>
+        <div class="data items">
+            <h2>Data</h2>
+            <ul>               
+                <li><strong>Population:</strong>4.71 million</li>
+                <li><strong>Capital:</strong>Accra</li>
+                <li><strong>Languages:</strong>English, Twi</li>
+                <li><strong>Currency:</strong>Cedis</li>
+                <li><strong>Time Zone:</strong>UTC 00</li>  
+            </ul>
+        </div>
+        <div class="weather items">
+            <h2>Weather</h2>
+            <div class="icon">
+                <img src="images/sunny.svg" class="mobile-icon" alt="A shining sun indicating good weather">
+
+            </div>
+            <ul class="left">    
+                <li><strong>Temperature(F):</strong><span id="temp">85° F</span></li>
+                <li><strong>Condition:</strong><span id="cond">Sunny</span></li>
+                <li><strong>Wind(mph):</strong><span id="wind">10 mph </span></li>
+                <li><strong>windchill(F):</strong><span id="windchill">48.2 F</span></li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> 🌺 Albert Antwi 🌺 Ghana</p>
+        <p class="para">Last Modification: <span id="lastModified"></span></p>
+    </footer>   
+</body>
+</html>
