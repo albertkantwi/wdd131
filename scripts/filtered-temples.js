@@ -133,8 +133,11 @@ function insertCard(temple) {
         photo.src = temple.imageUrl;
         photo.alt = temple.templeName;
 
-        photo.loading = isFirstCard ? "eager" : "lazy";
-        isFirstCard = false;
+        if (isFirstCard) {
+            photo.loading = "eager";
+            isFirstCard = false; 
+        }
+        else { photo.loading = "lazy" };
 
         card.appendChild(photo);
 
