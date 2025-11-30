@@ -57,7 +57,7 @@ const temples = [
   },
   {
     templeName: "Washington D.C.",
-    location: "Kensington, Maryland, United States",
+    location: "Kensington, Maryland, Us",
     dedicated: "1974, November, 19",
     area: 156558,
     imageUrl:
@@ -113,27 +113,22 @@ function insertCard(temple) {
         const card = document.createElement("div");
         card.classList.add("card");
 
-        // Name
         const heading = document.createElement("h2");
         heading.textContent = temple.templeName;
         card.appendChild(heading);
 
-        // Location
         const location = document.createElement("p");
         location.textContent = `Location: ${temple.location}`;
         card.appendChild(location);
 
-        // Dedicated
         const dedicationDate = document.createElement("p");
         dedicationDate.textContent = `Dedicated: ${temple.dedicated}`;
         card.appendChild(dedicationDate);
 
-        // Size
         const size = document.createElement("p");
         size.textContent = `Size: ${formatter.format(temple.area)} sq. ft.`;
         card.appendChild(size);
 
-        // Image
         const photo = document.createElement("img");
         photo.src = temple.imageUrl;
         photo.alt = temple.templeName;

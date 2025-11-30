@@ -88,7 +88,7 @@ h1 {
     font-size: 24px;
     font-weight: 700;
     text-align: center;
-    padding-top: 1rem;
+    padding: 1rem 0;
     color: var(--color-bg-1);
 }
 
@@ -98,18 +98,8 @@ h1 {
     align-items: center;
 }
 
-figure {
-    margin: 1rem 0;
-}
-
-figure img {
+img {
     width: 100%;
-}
-
-figcaption {
-    font-size: 0.8rem;
-    text-align: center;
-    color: var(--color-bg-1);
 }
 
 footer {

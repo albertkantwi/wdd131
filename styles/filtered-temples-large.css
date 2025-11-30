@@ -38,15 +38,16 @@
     }
 
     main {
-        max-width: 1040px;
+        max-width: 1140px;
         padding: 0 3%;
         margin: 0 auto;
     }
 
-    main div {
+    #templeContainer {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: .5rem;
+
 
     }
 
@@ -55,8 +56,6 @@
     border-radius: 5px;
     }
 
-    figure {
-        margin: 0.5rem 0;
-    }
+    
     
 }
