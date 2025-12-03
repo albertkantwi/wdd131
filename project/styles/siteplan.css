@@ -23,6 +23,13 @@ header {
     justify-content: space-around;
     background: var(--bg2);
     padding: 1rem 0;
+    color: var(--bg);
+}
+
+nav a{
+    color: var(--bg);
+    text-decoration: none;
+    padding: 0 .5rem;
 }
 
 main {
