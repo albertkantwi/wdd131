@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Product Review Form">
+    <meta name="author" content="Albert Antwi">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Product Review Form</title>
+</head>
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+    <main>
+        <form method="get" action="review.html" class="rev-form">
+            <label for="product">
+                Product Name
+                <select name="product" id="product" required>
+                    <option value="" disabled selected>Choose a Product ...</option>
+                </select>
+            </label>
+            <div>
+                Overall Ratings
+                <div class="rattings">
+                    <label for="star1"><input type="radio" name="rattings" id="star1" value="1" required>★</label>
+                    <label for="star2"><input type="radio" name="rattings" id="star2" value="2" required>★★</label>
+                    <label for="star3"><input type="radio" name="rattings" id="star3" value="3" required>★★★</label>
+                    <label for="star4"><input type="radio" name="rattings" id="star4" value="4" required>★★★★</label>
+                    <label for="star5"><input type="radio" name="rattings" id="star5" value="5" required>★★★★★</label>
+                </div>
+            </div>
+            <label for="date">Date of installation<input type="date" name="date" id="date" required></label>
+            <div>
+                <h4>Which features did yoy find useful in the product?</h4>
+                <p>(Check all that apply)</p>
+                <label for="durability"><input type="checkbox" name="features" id="durability">Durability</label>
+                <label for="ease"><input type="checkbox" name="features" id="ease">Ease of Use</label>
+                <label for="performance"><input type="checkbox" name="features" id="performance">Performance</label>
+                <label for="design"><input type="checkbox" name="features" id="design">Design</label>
+            </div>
+            <label for="review">Written Review<span>(optional)</span><textarea name="review" id="review" placeholder="Please enter any comments here."></textarea></label>
+            <label for="userName">Your Name<span>(optional)</span><input type="text" name="userName" id="userName"></label>
+            <input type="submit" value="Post Review">
+        </form>
+    </main>
+    <footer>
+        <p>© <span id="currentyear"></span> 🌺 Albert Antwi 🌺 Ghana</p>
+        <p class="para">Last Modification: <span id="lastModified"></span></p>
+    </footer>
+    
+</body>
+</html>
