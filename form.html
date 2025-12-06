@@ -18,7 +18,7 @@
     </header>
     <main>
         <form method="get" action="review.html" class="rev-form">
-            <label for="product">
+            <label for="product" class="label-set">
                 Product Name
                 <select name="product" id="product" required>
                     <option value="" disabled selected>Choose a Product ...</option>
@@ -34,17 +34,17 @@
                     <label for="star5"><input type="radio" name="rattings" id="star5" value="5" required>★★★★★</label>
                 </div>
             </div>
-            <label for="date">Date of installation<input type="date" name="date" id="date" required></label>
+            <label for="date" class="label-set">Date of installation<input type="date" name="date" id="date" required></label>
             <div>
                 <h4>Which features did yoy find useful in the product?</h4>
-                <p>(Check all that apply)</p>
-                <label for="durability"><input type="checkbox" name="features" id="durability">Durability</label>
-                <label for="ease"><input type="checkbox" name="features" id="ease">Ease of Use</label>
-                <label for="performance"><input type="checkbox" name="features" id="performance">Performance</label>
-                <label for="design"><input type="checkbox" name="features" id="design">Design</label>
+                <p class="check-tag">(Check all that apply)</p>
+                <label for="durability" class="check-items"><input type="checkbox" name="features" id="durability">Durability</label>
+                <label for="ease" class="check-items"><input type="checkbox" name="features" id="ease">Ease of Use</label>
+                <label for="performance" class="check-items"><input type="checkbox" name="features" id="performance">Performance</label>
+                <label for="design" class="check-items"><input type="checkbox" name="features" id="design">Design</label>
             </div>
-            <label for="review">Written Review<span>(optional)</span><textarea name="review" id="review" placeholder="Please enter any comments here."></textarea></label>
-            <label for="userName">Your Name<span>(optional)</span><input type="text" name="userName" id="userName"></label>
+            <label for="review" class="label-set">Written Review<span>(optional)</span><textarea name="review" id="review" placeholder="Please enter any comments here."></textarea></label>
+            <label for="userName" class="label-set">Your Name<span>(optional)</span><input type="text" name="userName" id="userName"></label>
             <input type="submit" value="Post Review">
         </form>
     </main>

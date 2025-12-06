@@ -13,6 +13,20 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: var(--font);
+    font-size: 1rem;
+}
+
+h1 {
+    background: var(--big-text);
+    color: var(--bg);
+    text-align: center;
+    padding: 1rem 0;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+}
+
 main {
     max-width: 1040px;
     margin: 0 auto;
@@ -24,13 +38,18 @@ main {
     width: 60%;
     background: var(--bg);
     padding: 1rem 4%;
-    margin: 0 auto;  
+    margin: 0 auto;
+    border-radius: 5px; 
 }
 .rev-form label {
     display: block;
-    padding: .5rem 0;
     color: var(--btn-color);
-    font-size: 1rem;
+   font-size: 1rem;
+}
+
+.label-set {
+   padding: 0.5rem 0;
+    margin: .5rem 0;
 }
 
 .rev-form input[type="text"],
@@ -44,6 +63,56 @@ main {
     margin-top: 5px;
 }
 
+.rev-form div {
+    color: var(--btn-color);
+}
+
+.rev-form input[type="checkbox"] {
+    margin-right: 5px;
+}
+
 .rattings {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.check-items {
+    padding: .2rem 0;
+}
+
+.check-tag {
+    font-style: italic;
+    padding-bottom: 5px;
+}
+
+span {
+    font-style: italic;
+}
+
+.rev-form input[type="submit"] {
+    width: 100%;
+    padding: .8rem 0;
+    color: var(--bg);
+    background-color: var(--btn-color);
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+footer {
+    background: var(--big-text);
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+footer p {
+    display: block;
+    text-align: center;
+    color: var(--bg);
+    font-size: 16px;
+}
+
+.para{
+    font-size: 13px;
 }
