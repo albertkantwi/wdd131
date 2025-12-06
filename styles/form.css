@@ -116,3 +116,9 @@ footer p {
 .para{
     font-size: 13px;
 }
+
+@media (max-width: 700px) {
+    .rev-form {
+        width: 90%;
+    }
+}
