@@ -1,0 +1,38 @@
+:root {
+    --big-text: #172b4d;
+    --small-text: #344563;
+    --btn-color: #396df2;
+    --bg: #fff;
+    --bg2: #6070ff;
+    --font: 'Lato', sans-serif;
+}
+
+main {
+    font-family: var(--font);
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid var(--btn-color);
+    color: var(--big-text);
+    margin: 0 auto;
+    padding: 2rem 4%;
+}
+
+.back-link a {
+    width: 300px;
+    border-radius: 5px;
+    padding: 1rem 0;
+    background: var(--btn-color);
+    display: block;
+    text-decoration: none;
+    font-size: 1rem;
+    color: var(--bg);
+    text-align: center;
+
+}
+
+.back-link a:hover {
+    background: var(--bg);
+    border: 1px solid var(--btn-color);
+    color: var(--btn-color);
+
+}
