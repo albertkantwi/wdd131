@@ -67,8 +67,20 @@ main {
     color: var(--btn-color);
 }
 
+.rev-form textarea {
+    height: 120px;
+}
+
 .rev-form input[type="checkbox"] {
     margin-right: 5px;
+}
+
+.rev-form input:required {
+    border-right: 8px solid red;
+}
+
+.rev-form input:required:valid {
+    border-right: 8px solid green;
 }
 
 .rattings {
@@ -98,6 +110,12 @@ span {
     border: none;
     border-radius: 5px;
     font-size: 1rem;
+}
+
+.rev-form input[type="submit"]:hover {
+    background-color: var(--bg);
+    border: 1px solid var(--btn-color);
+    color: var(--btn-color);
 }
 
 footer {
