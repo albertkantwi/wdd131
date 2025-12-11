@@ -27,6 +27,10 @@
      .question h2 {
         font-size: 1.2rem;
     }
+
+    .about-items div {
+        margin-top: 30px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -93,6 +97,18 @@
     font-size: 1.5rem;
     text-decoration: none;
     color: var(--bg);
+}
+
+.contact {
+    padding: 0 5%;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.contact-location {
+    grid-template-columns: 1fr;
 }
 
 }

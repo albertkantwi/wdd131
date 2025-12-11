@@ -168,6 +168,7 @@ main {
 .about-items {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .about-items div {
@@ -262,6 +263,11 @@ width: 60%;
 
 .contact {
     margin-bottom: 3rem;
+}
+
+.contact h1,
+.contact h2 {
+    color: var(--big-text);
 }
 
 .contact-address h1 {
