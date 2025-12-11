@@ -1,0 +1,44 @@
+:root {
+    --big-text: #172b4d;
+    --small-text: #344563;
+    --btn-color: #396df2;
+    --bg: #fff;
+    --bg2: #6070ff;
+    --font: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid var(--bg2);
+    height: 400px;
+    background: var(--bg);
+    padding: 4rem;
+}
+
+h2, p, a {
+    padding: 1rem 0;
+}
+
+h2 {
+    color: rgb(2, 200, 2);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+p {
+    color: var(--big-text);
+    font-size: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--btn-color);
+}

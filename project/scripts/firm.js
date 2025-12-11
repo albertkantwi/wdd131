@@ -63,7 +63,7 @@ const lawyersContainer = document.getElementById("lawyers");
 
 lawyersContainer.innerHTML = lawyersData.map(lawyer => `
     <div class="lawyer-card">
-        <img src="${lawyer.image}" alt="A lawyer image">
+        <img src="${lawyer.image}" loading="lazy" alt="A lawyer image">
         <h3>${lawyer.name}</h3>
         <p>${lawyer.description}</p>
     </div>
