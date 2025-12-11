@@ -1,5 +1,9 @@
 const hamButton = document.querySelector("#menu");
 const navigation = document.querySelector(".navigation");
+const contactForm = document.getElementById("contactForm");
+const usernameInput = document.getElementById("username");
+const usermailInput = document.getElementById("usermail");
+const usermessageInput = document.getElementById("usermessage");
 
 hamButton.addEventListener("click", () => {
   navigation.classList.toggle("open");
@@ -65,6 +69,49 @@ lawyersContainer.innerHTML = lawyersData.map(lawyer => `
     </div>
 `).join("");
 
-document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-document.getElementById("lastModified").innerHTML = document.lastModified;
+function loadFormData() {
+  const savedData = JSON.parse(localStorage.getItem("contactFormData"));
+
+  if (savedData) {
+    usernameInput.value = savedData.username || "";
+    usermailInput.value = savedData.usermail || "";
+    usermessageInput.value = savedData.usermessage || "";
+
+    if (savedData.purpose) {
+      const radio = document.querySelector(`input[name="purpose"][value="${savedData.purpose}"]`);
+      if (radio) radio.checked = true;
+    }
+  }
+}
+
+function saveFormData() {
+  const selectedPurpose = document.querySelector('input[name="purpose"]:checked');
+
+  const formData = {
+    username: usernameInput.value,
+    usermail: usermailInput.value,
+    usermessage: usermessageInput.value,
+    purpose: selectedPurpose ? selectedPurpose.value : ""
+  };
+
+  localStorage.setItem("contactFormData", JSON.stringify(formData));
+}
+
+contactForm.addEventListener("input", saveFormData);
+contactForm.addEventListener("change", saveFormData);
+
+loadFormData();
+
+
+// Update current year
+const yearElement = document.getElementById("currentyear");
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
+
+// Update last modified date
+const modifiedElement = document.getElementById("lastModified");
+if (modifiedElement) {
+  modifiedElement.textContent = document.lastModified;
+}

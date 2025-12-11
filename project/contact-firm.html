@@ -38,36 +38,38 @@
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31765.515364564373!2d-0.25494444225339286!3d5.612802164844007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf996579ca9ebd%3A0x99822538ef7ed82f!2sAchimota!5e0!3m2!1sen!2sgh!4v1759857053897!5m2!1sen!2sgh"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-            <form method="get" class="message" id="message">
-                <h2>Contact Us</h2>
-                <div class="box">
-                    <label for="username" class="box-label">Name</label>
-                    <input type="text" id="username" name="username" placeholder="Your name" class="box-input" required>
-                </div>
-                <div class="box">
-                    <label for="usermail" class="box-label">Email</label>
-                    <input type="email" id="usermail" name="usermail" placeholder="Email address" class="box-input" required>
-                </div>
-                <div class="message-purpose">
-            
-                    <div>
-                        <h3>Message Purpose</h3>
-                        <div class="msg-purpose">
-                            <label for="corporate"><input type="radio" name="purpose" id="corporate" value="Corporate law">Corporate law</label>
-                            <label for="civil"><input type="radio" name="purpose" id="civil" value="Civil litigation">Civil litigation</label>
-                            <label for="contract"><input type="radio" name="purpose" id="contract" value="Contract advisory">Contract advisory</label>
-                            <label for="property"><input type="radio" name="purpose" id="property" value="Property and land disputes">Property and land disputes</label>
-                            <label for="general"><input type="radio" name="purpose" id="general" value="General legal consultancy">General legal consultancy</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="message-area box">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" placeholder="Type here" class="box-input" required></textarea>
-                </div>
-                <input type="submit" value="Send Us a Message">
+            <form method="get" class="message" id="contactForm">
+            <h2>Contact Us</h2>
 
-            </form>
+            <div class="box">
+                <label for="username">Name</label>
+                <input type="text" id="username" name="username" placeholder="Your name" class="box-input" required>
+            </div>
+
+            <div class="box">
+                <label for="usermail">Email</label>
+                <input type="email" id="usermail" name="usermail" placeholder="Email address" class="box-input" required>
+            </div>
+
+            <div class="message-purpose">
+                <h3>Message Purpose</h3>
+                <div class="msg-purpose">
+                    <label><input type="radio" name="purpose" value="Corporate law"> Corporate law</label>
+                    <label><input type="radio" name="purpose" value="Civil litigation"> Civil litigation</label>
+                    <label><input type="radio" name="purpose" value="Contract advisory"> Contract advisory</label>
+                    <label><input type="radio" name="purpose" value="Property and land disputes"> Property and land disputes</label>
+                    <label><input type="radio" name="purpose" value="General legal consultancy"> General legal consultancy</label>
+                </div>
+            </div>
+
+            <div class="box">
+                <label for="usermessage">Message</label>
+                <textarea id="usermessage" name="message" placeholder="Type here" class="box-input" required></textarea>
+            </div>
+
+            <input type="submit" value="Send Us a Message">
+        </form>
+
 
         </div>
     </main>
