@@ -104,14 +104,6 @@ contactForm.addEventListener("change", saveFormData);
 loadFormData();
 
 
-// Update current year
-const yearElement = document.getElementById("currentyear");
-if (yearElement) {
-  yearElement.textContent = new Date().getFullYear();
-}
+document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-// Update last modified date
-const modifiedElement = document.getElementById("lastModified");
-if (modifiedElement) {
-  modifiedElement.textContent = document.lastModified;
-}
+document.getElementById("lastModified").innerHTML = document.lastModified;

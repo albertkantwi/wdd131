@@ -116,6 +116,12 @@ main {
     font-weight: 400;
 }
 
+.hero a:hover {
+    color: var(--big-text);
+    background: var(--bg);
+    border: 1px solid var(--btn-color);
+}
+
 .lawyer-section {
     margin: 2rem 0;
     background: var(--bg);
