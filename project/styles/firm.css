@@ -152,6 +152,8 @@ main {
 .lawyers h3 {
     font-size: 18px;
     padding: 1rem 0;
+    color: var(--big-text);
+
 }
 
 .lawyers p {

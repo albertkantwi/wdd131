@@ -1,0 +1,42 @@
+@media (max-width: 800px) {
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero a {
+        top: 400px;
+    }
+
+    .lawyer-section h2{
+        font-size: 1.5rem;
+    }
+
+     .question h2 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 1.2rem;
+        top: 30px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        top: 100px;
+    }
+
+    .hero a {
+        top: 260px;
+    }
+
+    .lawyers {
+        grid-template-columns: 1fr;
+    }
+
+}
