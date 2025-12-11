@@ -1,32 +1,27 @@
-const hamButton = document.querySelector("#menu");
-const navigation = document.querySelector(".navigation");
-const contactForm = document.getElementById("contactForm");
-const usernameInput = document.getElementById("username");
-const usermailInput = document.getElementById("usermail");
-const usermessageInput = document.getElementById("usermessage");
+document.addEventListener("DOMContentLoaded", () => {
 
-hamButton.addEventListener("click", () => {
-  navigation.classList.toggle("open");
-	hamButton.classList.toggle("open");
-});
+  const hamButton = document.querySelector("#menu");
+  const navigation = document.querySelector(".navigation");
 
-const faqs = document.querySelectorAll('.faq-item');
-
-
-
-faqs.forEach(item => {
-    item.addEventListener('click', () => {
-      const answer = item.querySelector('.faq-answer');
-      
-      if (answer.style.display === 'block') {
-        answer.style.display = 'none';
-      } else {
-        answer.style.display = 'block';
-      }
+  if (hamButton && navigation) {
+    hamButton.addEventListener("click", () => {
+      navigation.classList.toggle("open");
+      hamButton.classList.toggle("open");
     });
-  });
+  }
 
-const lawyersData = [
+  const faqs = document.querySelectorAll('.faq-item');
+  if (faqs.length > 0) {
+    faqs.forEach(item => {
+      item.addEventListener('click', () => {
+        const answer = item.querySelector('.faq-answer');
+        if (!answer) return;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  }
+
+  const lawyersData = [
   {
     name: "Noah Zegeh",
     image: "images/lawyer01.jpg",
@@ -59,51 +54,68 @@ const lawyersData = [
   }
 ];
 
-const lawyersContainer = document.getElementById("lawyers");
-
-lawyersContainer.innerHTML = lawyersData.map(lawyer => `
-    <div class="lawyer-card">
+  const lawyersContainer = document.getElementById("lawyers");
+  if (lawyersContainer) {
+    lawyersContainer.innerHTML = lawyersData.map(lawyer => `
+      <div class="lawyer-card">
         <img src="${lawyer.image}" loading="lazy" alt="A lawyer image">
         <h3>${lawyer.name}</h3>
         <p>${lawyer.description}</p>
-    </div>
-`).join("");
-
-
-function loadFormData() {
-  const savedData = JSON.parse(localStorage.getItem("contactFormData"));
-
-  if (savedData) {
-    usernameInput.value = savedData.username || "";
-    usermailInput.value = savedData.usermail || "";
-    usermessageInput.value = savedData.usermessage || "";
-
-    if (savedData.purpose) {
-      const radio = document.querySelector(`input[name="purpose"][value="${savedData.purpose}"]`);
-      if (radio) radio.checked = true;
-    }
+      </div>
+    `).join("");
   }
-}
 
-function saveFormData() {
-  const selectedPurpose = document.querySelector('input[name="purpose"]:checked');
+  
+  const contactForm = document.getElementById("contactForm");
+  if (contactForm) {
+    const usernameInput = document.getElementById("username");
+    const usermailInput = document.getElementById("usermail");
+    const usermessageInput = document.getElementById("usermessage");
 
-  const formData = {
-    username: usernameInput.value,
-    usermail: usermailInput.value,
-    usermessage: usermessageInput.value,
-    purpose: selectedPurpose ? selectedPurpose.value : ""
-  };
+    function loadFormData() {
+      const savedData = JSON.parse(localStorage.getItem("contactFormData"));
+      if (!savedData) return;
 
-  localStorage.setItem("contactFormData", JSON.stringify(formData));
-}
+      if (usernameInput) usernameInput.value = savedData.username || "";
+      if (usermailInput) usermailInput.value = savedData.usermail || "";
+      if (usermessageInput) usermessageInput.value = savedData.usermessage || "";
 
-contactForm.addEventListener("input", saveFormData);
-contactForm.addEventListener("change", saveFormData);
+      if (savedData.purpose) {
+        const radio = document.querySelector(`input[name="purpose"][value="${savedData.purpose}"]`);
+        if (radio) radio.checked = true;
+      }
+    }
 
-loadFormData();
+    function saveFormData() {
+      const selectedPurpose = document.querySelector('input[name="purpose"]:checked');
+
+      const formData = {
+        username: usernameInput ? usernameInput.value : "",
+        usermail: usermailInput ? usermailInput.value : "",
+        usermessage: usermessageInput ? usermessageInput.value : "",
+        purpose: selectedPurpose ? selectedPurpose.value : ""
+      };
+
+      localStorage.setItem("contactFormData", JSON.stringify(formData));
+    }
+
+    contactForm.addEventListener("input", saveFormData);
+    contactForm.addEventListener("change", saveFormData);
+
+    loadFormData();
+  }
+
+  const yearElement = document.getElementById("currentyear");
+  if (yearElement) yearElement.textContent = new Date().getFullYear();
+
+  const modifiedElement = document.getElementById("lastModified");
+  if (modifiedElement) modifiedElement.textContent = document.lastModified;
+
+});
 
 
-document.getElementById("currentyear").textContent = new Date().getFullYear();
 
-document.getElementById("lastModified").innerHTML = document.lastModified;
+
+
+
+
