@@ -16,10 +16,6 @@
         font-size: 1.2rem;
     }
 
-    .hero a {
-        top: 400px;
-    }
-
     .lawyer-section h2{
         font-size: 1.5rem;
     }
@@ -42,10 +38,6 @@
     .hero p {
         font-size: 1rem;
         top: 100px;
-    }
-
-    .hero a {
-        top: 260px;
     }
 
     .lawyers {
