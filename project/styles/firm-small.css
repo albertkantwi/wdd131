@@ -1,3 +1,12 @@
+:root {
+    --big-text: #172b4d;
+    --small-text: #344563;
+    --btn-color: #396df2;
+    --bg: #fff;
+    --bg2: #6070ff;
+    --font: 'Poppins', sans-serif;
+}
+
 @media (max-width: 800px) {
     .hero h1 {
         font-size: 1.5rem;
@@ -38,5 +47,52 @@
     .lawyers {
         grid-template-columns: 1fr;
     }
+
+    #menu {
+    display: block;
+    font-size: 2rem;
+    border: 0;
+    background: none;
+    color: var(--bg);
+    position: absolute;
+    top: 1rem;
+    right: 3rem;
+    z-index: 200;
+}
+
+#menu::before {
+	content: "☰";
+}
+
+#menu.open::before {
+	content: "❎";
+}
+
+.navigation {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg2);
+    padding-top: 3rem; 
+    text-align: center;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;             
+    z-index: 10;
+}
+
+.navigation.open {
+    display: flex;
+}
+
+.navigation a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--bg);
+}
 
 }
